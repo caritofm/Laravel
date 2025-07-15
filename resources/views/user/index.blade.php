@@ -10,7 +10,7 @@
    
     <ul>
         @forelse($users as $user)
-            <li>{{$user->name}}</li>
+            <li>{{$user->email}}</li>
         @empty
             <li>List Empty</li>
         @endforelse

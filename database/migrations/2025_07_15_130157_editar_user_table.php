@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('notes', function (Blueprint $table) {
-            $table->id();
-            $table -> string('title', 255);
-            $table -> string ('description', 255) -> nullable();
-            $table->timestamps();
+        //Editar table user
+        Schema::table('users', function(blueprint $table){
+            $table -> unsignedInteger('age') -> default(18);
+            $table->string('addres') -> nullable();
+            $table->unsignedBigInteger('zip_code') -> nullable();
+
         });
     }
 
@@ -24,6 +25,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('notes');
+        //
+        Schema::dropColum(['age']);
     }
 };

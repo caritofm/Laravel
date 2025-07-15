@@ -10,6 +10,7 @@
 </head>
 <body>
     @include('layouts._partials.menu')
+    @include('layouts._partials.messages')
     @yield('content')
     
 </body>
