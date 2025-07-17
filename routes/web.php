@@ -22,4 +22,8 @@ Route::get('/note/show/{note}', [NoteController::class, 'show'])-> name('note.sh
 Route::delete('/note/delete/{note}', [NoteController::class, 'delete']) -> name('note.delete');*/
 
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UsersController;
+
 Route::get('/',[ProductController::class, 'index'])-> name('product.index');
+
+Route::get('/', [UsersController::class, 'index'])-> name('users.index');

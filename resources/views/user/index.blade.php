@@ -6,15 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Users List</h1>
-   
-    <ul>
-        @forelse($users as $user)
-            <li>{{$user->email}}</li>
-        @empty
-            <li>List Empty</li>
-        @endforelse
-    </ul>
+    
+        <h1>{{$user -> image -> url }}</h1>
+    
 
 </body>
 </html>
